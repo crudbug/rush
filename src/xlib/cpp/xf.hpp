@@ -525,7 +525,7 @@ struct xf
 		return ::GetCommandLineA();
 #else
 #ifdef EMSCRIPTEN
-		return "rpp -interpret src/example/test/10_1.rpp";
+		return "rush -interpret src/example/test/10_1.rs";
 #else
 		static char temp[4096];
 		temp[0]=0;

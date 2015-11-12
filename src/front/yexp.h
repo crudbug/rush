@@ -629,30 +629,9 @@ struct yexp
 		}
 		return true;
 	}
-
-	static rbool p_exp(tsh& sh,rbuf<tword>& v,tfunc& tfi,
-		int level,tenv env)
-	{
-		tsent sent;
-		sent.vword=v;
-		sent.pos.line=1;
-		ifn(p_exp(sh,sent,tfi,level,env))
-		{
-			return false;
-		}
-		v=sent.vword;
-		return true;
-	}
-
-	static rbool p_exp(tsh& sh,tsent& src,tfunc& tfi,
-		int level,tenv env)
-	{
-		return p_exp(sh,src,src,tfi,level,env);
-	}
 	
 	//表达式标准化，并设置dst.type
-	static rbool p_exp(tsh& sh,tsent src,tsent& dst,tfunc& tfi,
-		int level,tenv env)
+	static rbool p_exp(tsh& sh,tsent& src,tfunc& tfi,int level,tenv env)
 	{
 		tclass& tci=*tfi.ptci;
 		if(level>c_rs_deep)
@@ -661,7 +640,6 @@ struct yexp
 			return false;
 		}
 		level++;
-		dst.clear();
 		rbuf<rstr> soptr;
 		rbuf<tsent> sopnd;
 		soptr.push(rsoptr(c_sharp_sharp));
@@ -698,9 +676,8 @@ struct yexp
 					rserror(src,"miss )");
 					return false;
 				}
-				tsent outopnd;
-				outopnd.pos=src.pos;
-				if(!p_exp(sh,src.sub(i+1,right),outopnd,tfi,level,env))
+				tsent outopnd=src.sub(i+1,right);
+				if(!p_exp(sh,outopnd,tfi,level,env))
 				{
 					return false;
 				}
@@ -994,8 +971,8 @@ struct yexp
 			rserror(src,"expression error");
 			return false;
 		}
-		dst=r_move(sopnd[0]);
-		if(dst.vword.empty()||dst.type.empty())
+		src=r_move(sopnd[0]);
+		if(src.vword.empty()||src.type.empty())
 		{
 			rserror(src,"expression error");
 			return false;

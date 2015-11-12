@@ -172,7 +172,7 @@ struct ysent
 				{
 					return false;
 				}
-#ifndef _RS
+#ifdef _MSC_VER
 				((void (__stdcall *)(rbuf<tword>&,int))(ptfi->code))(v,i);
 #endif
 			}

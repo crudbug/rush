@@ -21,7 +21,21 @@ struct tword
 		val=s;
 	}
 
+	tword(const tword& a)
+	{
+		pos=a.pos;
+		val=a.val;
+		multi=a.multi;
+	}
+
 	tword(tword&& a)
+	{
+		pos=a.pos;
+		val=a.val;
+		multi=a.multi;
+	}
+
+	void operator=(const tword& a)
 	{
 		pos=a.pos;
 		val=a.val;
@@ -304,7 +318,21 @@ struct tsent
 		clear();
 	}
 
+	tsent(const tsent& a)
+	{
+		pos=a.pos;
+		type=a.type;
+		vword=a.vword;
+	}
+
 	tsent(tsent&& a)
+	{
+		pos=a.pos;
+		type=a.type;
+		vword=a.vword;
+	}
+
+	void operator=(const tsent& a)
 	{
 		pos=a.pos;
 		type=a.type;
@@ -470,25 +498,26 @@ struct tclass
 	int size;
 	rbool is_friend;
 
-	void clear()
+	tclass()
 	{
-		name.clear();
-		vmac.clear();
-		vdata.clear();
-		vfunc.clear();
-		vfunctl.clear();
-
-		vword.clear();
-		vtl.clear();
-		vfather.clear();
-
 		size=0;
 		is_friend=false;
 	}
 
-	tclass()
+	tclass(const tclass& a)
 	{
-		clear();
+		name=a.name;
+		vmac=a.vmac;
+		vdata=a.vdata;
+		vfunc=a.vfunc;
+		vfunctl=a.vfunctl;
+
+		vword=a.vword;
+		vtl=a.vtl;
+		vfather=a.vfather;
+
+		size=a.size;
+		is_friend=a.is_friend;
 	}
 
 	friend rbool operator<(const tclass& a,const tclass& b)

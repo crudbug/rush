@@ -379,7 +379,25 @@ struct tasm
 		this->pos=pos;
 	}
 
+	tasm(const tasm& a)
+	{
+		ins=a.ins;
+		vstr=a.vstr;
+		pos=a.pos;
+		ptfi=a.ptfi;
+		start=a.start;
+	}
+
 	tasm(tasm&& a)
+	{
+		ins=a.ins;
+		vstr=a.vstr;
+		pos=a.pos;
+		ptfi=a.ptfi;
+		start=a.start;
+	}
+
+	void operator=(const tasm& a)
 	{
 		ins=a.ins;
 		vstr=a.vstr;
