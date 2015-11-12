@@ -1,0 +1,1 @@
+rush ..\src\example\example_test.rs

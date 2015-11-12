@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F132B255-A59F-48D1-9C64-69280C9BBD0A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>rush</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)..\..\..\bin\$(ProjectName).exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)..\..\..\bin\$(ProjectName).exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\rush.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\back\zasm.h" />
+    <ClInclude Include="..\back\zbin.h" />
+    <ClInclude Include="..\back\zgpp.h" />
+    <ClInclude Include="..\back\zvm.h" />
+    <ClInclude Include="..\back\zjit.h" />
+    <ClInclude Include="..\back\zjitb.h" />
+    <ClInclude Include="..\back\zjitf.h" />
+    <ClInclude Include="..\back\zjiti.h" />
+    <ClInclude Include="..\back\zmain.h" />
+    <ClInclude Include="..\back\znasm.h" />
+    <ClInclude Include="..\back\zopt.h" />
+    <ClInclude Include="..\front\yadd.h" />
+    <ClInclude Include="..\front\yautof.h" />
+    <ClInclude Include="..\front\ybase.h" />
+    <ClInclude Include="..\front\yclass.h" />
+    <ClInclude Include="..\front\yclasstl.h" />
+    <ClInclude Include="..\front\yconsteval.h" />
+    <ClInclude Include="..\front\ycontrol.h" />
+    <ClInclude Include="..\front\yexp.h" />
+    <ClInclude Include="..\front\yfind.h" />
+    <ClInclude Include="..\front\yformat.h" />
+    <ClInclude Include="..\front\yfunctl.h" />
+    <ClInclude Include="..\front\ylambda.h" />
+    <ClInclude Include="..\front\ylazy.h" />
+    <ClInclude Include="..\front\ymac.h" />
+    <ClInclude Include="..\front\ymatch.h" />
+    <ClInclude Include="..\front\ymemb.h" />
+    <ClInclude Include="..\front\ypre.h" />
+    <ClInclude Include="..\front\yrep.h" />
+    <ClInclude Include="..\front\ysent.h" />
+    <ClInclude Include="..\front\ysuper.h" />
+    <ClInclude Include="..\front\yword.h" />
+    <ClInclude Include="..\rlib\ralgo.h" />
+    <ClInclude Include="..\rlib\rbuf.h" />
+    <ClInclude Include="..\rlib\rcode.h" />
+    <ClInclude Include="..\rlib\rdb.h" />
+    <ClInclude Include="..\rlib\rdic.h" />
+    <ClInclude Include="..\rlib\rdir.h" />
+    <ClInclude Include="..\rlib\rf.h" />
+    <ClInclude Include="..\rlib\rfile.h" />
+    <ClInclude Include="..\rlib\rhash.h" />
+    <ClInclude Include="..\rlib\rlist.h" />
+    <ClInclude Include="..\rlib\rmutex.h" />
+    <ClInclude Include="..\rlib\rnew.h" />
+    <ClInclude Include="..\rlib\rpair.h" />
+    <ClInclude Include="..\rlib\rset.h" />
+    <ClInclude Include="..\rlib\rstr.h" />
+    <ClInclude Include="..\rlib\rstrw.h" />
+    <ClInclude Include="..\struct\tasm.h" />
+    <ClInclude Include="..\struct\tbase.h" />
+    <ClInclude Include="..\struct\tconf.h" />
+    <ClInclude Include="..\struct\tdef.h" />
+    <ClInclude Include="..\xlib\cpp\xbase.hpp" />
+    <ClInclude Include="..\xlib\cpp\xf.hpp" />
+    <ClInclude Include="..\xlib\xf.h" />
+    <ClInclude Include="..\xlib\xfs.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

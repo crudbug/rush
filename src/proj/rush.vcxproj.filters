@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="rlib">
+      <UniqueIdentifier>{5a98af4d-d0a1-4567-b038-2beed7edf748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="front">
+      <UniqueIdentifier>{587fce6d-bb14-4f2e-9ed8-55eb21e387d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="back">
+      <UniqueIdentifier>{ad80822d-9cf8-45a4-ad48-f14dccdb7681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="struct">
+      <UniqueIdentifier>{1bd38bd7-12db-4519-8f29-c890641f2fd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xlib">
+      <UniqueIdentifier>{9912fb30-874f-44ba-9f10-ebc090f6e14f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xlib\cpp">
+      <UniqueIdentifier>{6acb8975-096a-4915-b0ce-939c39fba2fa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\rush.cxx">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\rlib\ralgo.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rbuf.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rcode.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rdb.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rdic.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rdir.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rf.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rfile.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rhash.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rlist.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rmutex.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rnew.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rpair.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rset.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rstr.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rlib\rstrw.h">
+      <Filter>rlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\zasm.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\zbin.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\zgpp.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\zjit.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\zjitb.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\zjitf.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\zjiti.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\zmain.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\znasm.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\zopt.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yadd.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yautof.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\ybase.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yclass.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yclasstl.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yconsteval.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\ycontrol.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yexp.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yfind.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yfunctl.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\ylambda.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\ylazy.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\ymac.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\ymatch.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\ymemb.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\ypre.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yrep.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\ysent.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\ysuper.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yword.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\front\yformat.h">
+      <Filter>front</Filter>
+    </ClInclude>
+    <ClInclude Include="..\struct\tasm.h">
+      <Filter>struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\struct\tbase.h">
+      <Filter>struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\struct\tconf.h">
+      <Filter>struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\struct\tdef.h">
+      <Filter>struct</Filter>
+    </ClInclude>
+    <ClInclude Include="..\back\zvm.h">
+      <Filter>back</Filter>
+    </ClInclude>
+    <ClInclude Include="..\xlib\xf.h">
+      <Filter>xlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\xlib\cpp\xbase.hpp">
+      <Filter>xlib\cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\xlib\cpp\xf.hpp">
+      <Filter>xlib\cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\xlib\xfs.h">
+      <Filter>xlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
