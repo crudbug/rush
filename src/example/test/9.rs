@@ -7,7 +7,7 @@
 define ← =
 
 void insertion_sort(rstr& a):
-	for j=1;j<a.count;j++
+	for j ← 1; j<a.count; j ← j+1
 		key ← a[j]
 		i ← j-1
 		while i>=0 && a[i]>key
