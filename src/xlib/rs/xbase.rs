@@ -116,7 +116,7 @@ T r_cond<T>(bool cond,T a,T b)
 	return b
 }
 
-char r_char(rstr s)
+char r_char(char* s)
 {
 	return s[0]
 }

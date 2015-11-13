@@ -100,6 +100,7 @@ struct ypre
 		{
 			return false;
 		}
+		char_replace(dst);
 		const_replace(dst);
 		combine_double(dst);
 		combine_float(dst);
@@ -110,6 +111,21 @@ struct ypre
 			this_replace(sh,dst);
 		}
 		return true;
+	}
+
+	static void char_replace(rbuf<tword>& v)
+	{
+		for(int i=0;i<v.count();i++)
+		{
+			//r_char ( rstr ( "" ) )
+			if(v[i].val=="r_char"&&i+5<v.count()&&v[i+2].val=="rstr")
+			{
+				v[i+2].clear();
+				v[i+3].clear();
+				v[i+5].clear();
+			}
+		}
+		ybase::arrange(v);
 	}
 
 	static rbool obtain_all_file(tsh& sh)
